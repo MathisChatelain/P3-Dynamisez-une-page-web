@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto,Shrikhand;
+    /* Variables globales */
+    --OMF-purple-primary : #9356DC;
+    --OMF-pink-secondary : #FF79DA;
+    --OMF-cyan-tertiary : #99E2D0;
+}
+
+img {
+    object-fit: cover;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
+
+
+article {
+    width: calc(100% - 40px);
+    margin: 20px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+article > img {
+    height: calc(100% - 100px);
+    width: 100%;
+}
