@@ -89,7 +89,7 @@ header > button {
 #fonctionnement-section > card {
     display: flex;
     height: 60px;
-    padding: 0px 12px;
+    margin: 0px 12px;
     border-radius: 15px;
     background-color: var(--OMF-gray-light);
     justify-content: flex-start;
@@ -142,11 +142,26 @@ article > img {
 
 article > i {
     position: relative;
-    top: 0px;
-    left: 90%;
+    top: 20px;
+    left: 86%;
+    font-size: 22px;
 }
 
+article > h4 {
+    position: relative;
+    left: 4%;
+    top: -12px;
+    font-size: 20px;
+}
 
+article > h5 {
+    position: relative;
+    left: 4%;
+    top: -10px;
+    font-size: 19px;
+    font-weight: 100;
+    color: var(--OMF-gray-dark);
+}
 
 
 
