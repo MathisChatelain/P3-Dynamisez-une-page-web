@@ -13,16 +13,19 @@ header {
     background-color: var(--OMF-gray-light);
 }
 
-header > nav {
+nav {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
     width: 100%;
     height: 65px;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0px 0px 15px 0px rgb(0 0 0 / 20%);
 }
 
-header > nav > img {
+nav > img {
     margin-top: 6px;
     width: 164px;
 }
@@ -34,6 +37,7 @@ header > input {
     text-align: center;
     background-color: var(--OMF-gray);
     box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
+    margin-top: 65px;
 }
 
 header > input::placeholder {
@@ -59,7 +63,7 @@ header > h3 {
     font-weight: 400;
 }
 
-header > button {
+button {
     padding: 13px 15px;
     margin: 30px 30px 60px 30px;
     font-size: 20px;
@@ -68,9 +72,16 @@ header > button {
     border: none;
     background: rgb(255,121,218);
     background: linear-gradient(176deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
+    box-shadow: 0px 3px 10px 0px rgb(0 0 0 / 50%);
+    transition: 600ms;
 }
 
-
+button:hover {
+    transition: 600ms;
+    box-shadow: 0px 3px 20px 0px rgb(0 0 0 / 70%);
+    background: rgb(255,121,218);
+    background: linear-gradient(176deg, rgba(255,121,218,1) 0%, rgba(229,113,218,1) 50%, rgba(197,102,219,1) 75%, rgba(146,86,220,1) 100%);
+}
 
 
 #fonctionnement-section {
@@ -97,6 +108,10 @@ header > button {
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
 }
 
+#fonctionnement-section > card:hover {
+    background-color: #f5edff;
+}
+
 .number_label {
     background-color: var(--OMF-purple-primary);
     color: white;
@@ -110,7 +125,16 @@ header > button {
     left: -12px;
 }
 
+#fonctionnement-section > card > i {
+    color: gray;
+    font-size: 18px;
+    margin: 0px 10px;
+}
 
+#fonctionnement-section > card > h4 {
+    font-size: 18px;
+    margin: 0px 10px;
+}
 
 
 
@@ -118,7 +142,8 @@ header > button {
 
 #restaurants-section {
     margin-top: 28px;
-    background-color: var(--OMF-gray-light);
+    background-color: var(--OMF-gray-light); 
+    margin-bottom: 62px;
 }
 
 #restaurants-section > h2 {
@@ -135,16 +160,41 @@ article {
     overflow: hidden;
 }
 
+article > .nouveau {
+    padding: 5px 12px;
+    position: relative;
+    left: calc(100% - 83px);
+    top: -165px;
+    font-size: 14px;
+    border-radius: 2px;
+    font-weight: bold;
+    color: #008766;
+    background-color: var(--OMF-cyan-tertiary);
+}
+
 article > img {
     height: calc(100% - 78px);
     width: 100%;
 }
 
-article > i {
+article > svg {
     position: relative;
     top: 20px;
-    left: 86%;
-    font-size: 22px;
+    left: calc(100% - 124px);
+}
+
+article > embed {
+    position: relative;
+    top: 20px;
+    left: calc(100% - 124px);
+}
+
+.heart-inside {
+    left: calc(100% - 151px);
+}
+
+path:hover {
+    opacity: 0.5;
 }
 
 article > h4 {
@@ -170,17 +220,23 @@ article > h5 {
 footer {
     display: flex;
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0px 20px 50px 20px;
     background-color: var(--OMF-gray-dark);
 }
 
-footer > img {
-    width: 80px;
-    margin: 20px 0px;
-    background-color: white;
+footer > object {
+    width: 98px;
+    margin: 25px 0px 15px 5px;
+    filter: invert();
 }
 
 footer > a {
-    margin: 10px 0px;
+    margin: 3px 5px;
+    font-size: 18px;
     color: white;
+}
+
+footer > a > i {
+    font-size: 14px;
+    width: 20px;
 }

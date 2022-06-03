@@ -1,3 +1,94 @@
 header > img {
     width: 100%;
+    margin-top: 60px;
+    height: 280px;
+}
+
+#button-to-home {
+    position: fixed;
+    z-index: 11;
+    padding: 25px 24px 15px;
+}
+
+#button-to-home > i {
+    font-size: 24px;
+}
+
+h1 {
+    font-family: Shrikhand;
+    font-size: 28px;
+    font-weight: 300;
+    margin: 29px 20px 0px;
+}
+
+h1 > svg {
+    margin-left: 27px;
+}
+
+main {
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+    position: absolute;
+    top: 285px;
+    background-color: var(--OMF-gray-light);
+}
+
+section {
+    padding: 30px 20px;
+    counter-reset: article-counter 0;
+}
+
+section > h2 {
+    font-weight: 100;
+    font-size: 18px;
+    width: 50px;
+    box-shadow: inset 0px -2px 0px 0px var(--OMF-cyan-tertiary);
+    padding-bottom: 3px;
+}
+
+section > article {
+    counter-increment: article-counter 1;
+    width: 100%;
+    margin: 13px 0px;
+    padding: 5px;
+    height: 70px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 20%);
+    animation: animation-appear 1s linear;
+    animation-delay: counter(article-counter);
+}
+
+section > article::before{
+    animation-delay: counter(article-counter);
+}
+
+section > article > h4 {
+    top: 8px;
+    left: 0px;
+}
+
+section > article > h5 {
+    top: 12px;
+    left: 0px;
+    font-size: 15px;
+}
+
+section > article > p {
+    top: -5px;
+    position: relative;
+    text-align: end;
+    margin-right: 10px;
+}
+
+section > button {
+    position: relative;
+    top: 50px;
+    left: 0px;
+}
+
+footer {
+    position: absolute;
+    top: 1444px;
+    width: 100%;
 }
