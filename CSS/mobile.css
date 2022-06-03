@@ -193,10 +193,6 @@ article > embed {
     left: calc(100% - 151px);
 }
 
-path:hover {
-    opacity: 0.5;
-}
-
 article > h4 {
     position: relative;
     left: 4%;

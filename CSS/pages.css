@@ -35,7 +35,6 @@ main {
 
 section {
     padding: 30px 20px;
-    counter-reset: article-counter 0;
 }
 
 section > h2 {
@@ -44,10 +43,12 @@ section > h2 {
     width: 50px;
     box-shadow: inset 0px -2px 0px 0px var(--OMF-cyan-tertiary);
     padding-bottom: 3px;
+    opacity: 0;
+    animation: 1s animation-appear linear;
+    animation-fill-mode: forwards;
 }
 
 section > article {
-    counter-increment: article-counter 1;
     width: 100%;
     margin: 13px 0px;
     padding: 5px;
@@ -55,13 +56,16 @@ section > article {
     border-radius: 15px;
     background-color: white;
     box-shadow: 0px 0px 10px 3px rgb(0 0 0 / 20%);
-    animation: animation-appear 1s linear;
-    animation-delay: counter(article-counter);
+    opacity: 0;
+    animation: 1s animation-appear linear;
+    animation-fill-mode: forwards;
 }
 
-section > article::before{
-    animation-delay: counter(article-counter);
-}
+.se-1 { animation-delay: 500ms; }
+.se-2 { animation-delay: 1000ms; }
+.se-3 { animation-delay: 1500ms; }
+
+
 
 section > article > h4 {
     top: 8px;
