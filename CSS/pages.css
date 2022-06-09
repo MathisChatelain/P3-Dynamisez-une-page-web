@@ -34,7 +34,7 @@ main {
 }
 
 section {
-    padding: 30px 20px;
+    padding: 10px 20px;
 }
 
 section > h2 {
@@ -59,6 +59,10 @@ section > article {
     opacity: 0;
     animation: 1s animation-appear linear;
     animation-fill-mode: forwards;
+}
+
+#se-first {
+    margin-top: 20px;
 }
 
 .se-1 { animation-delay: 500ms; }
@@ -86,9 +90,7 @@ section > article > p {
 }
 
 section > button {
-    position: relative;
-    top: 50px;
-    left: 0px;
+    margin: 0px;
 }
 
 footer {

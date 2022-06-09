@@ -11,6 +11,8 @@
     --OMF-gray-dark : #353535;
     --OMF-gray : #eaeaea;
     --OMF-gray-light : #f6f6f6;
+    --loading-screen-size : 400px;
+    --loading-screen-circle-width : 150px;
 }
 
 img {
@@ -32,43 +34,94 @@ a {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: #f5edff;
-    z-index: 5;
+    position: fixed;
+    background-color: #9356DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 15;
+    animation: 1s fade 2s linear;
+    animation-fill-mode: forwards;
+}
+
+#loading-screen > img {
+  filter: invert();
+  margin: 50px;
+  animation: 2s appear-then-fade linear;
+  animation-fill-mode: forwards;
 }
 
 .lds-dual-ring {
-    display: inline-block;
-    width: 80px;
-    height: 80px;
+  display: inline-block;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 60px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: 2s lds-dual-ring linear;
+  animation-fill-mode: forwards;
+}
+  
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
   }
-  .lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #fff;
-    border-color: #fff transparent #fff transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
+  50% {
+    opacity: 1;
   }
-  @keyframes lds-dual-ring {
-    0% {
-      transform: rotate(0deg);
+  100% {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-appear {
+  from {
+      opacity: 0;
+      transform: translateY(50px);
     }
-    100% {
-      transform: rotate(360deg);
+  
+  to {
+      opacity: 1;
+      transform: translateY(0px);
     }
+  }
+
+@keyframes fade {
+  from {
+      opacity: 1;
   }
   
-  @keyframes animation-appear {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-      }
-    
-    to {
-        opacity: 1;
-        transform: translateY(0px);
-      }
+  to {
+      opacity: 0;
+  }
+}
+
+@keyframes appear-then-fade {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
+  }
+  
+  100% {
+    opacity: 0;
+  }
 }
