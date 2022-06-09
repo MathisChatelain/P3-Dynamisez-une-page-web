@@ -48,7 +48,7 @@ a {
 #loading-screen > img {
   filter: invert();
   margin: 50px;
-  animation: 2s appear-then-fade linear;
+  animation: 1s fade 2s linear;
   animation-fill-mode: forwards;
 }
 
@@ -99,29 +99,17 @@ a {
   }
 
 @keyframes fade {
-  from {
+  0% {
       opacity: 1;
   }
   
-  to {
+  99% {
       opacity: 0;
   }
-}
 
-@keyframes appear-then-fade {
-  0% {
-    opacity: 0;
-  }
-
-  25% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 1;
-  }
-  
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
+

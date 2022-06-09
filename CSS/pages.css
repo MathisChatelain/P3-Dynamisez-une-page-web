@@ -59,6 +59,7 @@ section > article {
     opacity: 0;
     animation: 1s animation-appear linear;
     animation-fill-mode: forwards;
+    overflow: hidden;
 }
 
 #se-first {
@@ -74,12 +75,28 @@ section > article {
 section > article > h4 {
     top: 8px;
     left: 0px;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 section > article > h5 {
     top: 12px;
     left: 0px;
     font-size: 15px;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+section > article:hover h5{
+    width: 65%;
+}
+
+section > article:hover h4{
+    width: 78%;
 }
 
 section > article > p {
@@ -87,6 +104,37 @@ section > article > p {
     position: relative;
     text-align: end;
     margin-right: 10px;
+}
+
+section > article:hover p {
+    margin-right: 70px;
+}
+
+section > article > div {
+    position: relative;
+    display: flex;
+    top: -67px;
+    left: 110%;
+    height: 75px;
+    width: 70px;
+    background-color: var(--OMF-cyan-tertiary);
+    justify-content: center;
+    align-items: center;
+}
+
+section > article:hover div {
+    left: calc(100% - 60px);
+}
+
+section > article > div > i {
+    color: white;
+    font-size: 24px;
+    transform: rotate(180deg);
+    transition-duration: 1s;
+}
+
+section > article:hover i {
+    transform: rotate(720deg);
 }
 
 section > button {

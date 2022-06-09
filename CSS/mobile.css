@@ -131,6 +131,10 @@ button:hover {
     margin: 0px 10px;
 }
 
+#fonctionnement-section > card > i:hover {
+    color: var(--OMF-purple-primary);
+}
+
 #fonctionnement-section > card > h4 {
     font-size: 18px;
     margin: 0px 10px;
@@ -191,6 +195,12 @@ article > embed {
 
 .heart-inside {
     left: calc(100% - 151px);
+    z-index: 3;
+    opacity: 0;
+}
+
+.heart-inside:hover {
+    opacity: 1;
 }
 
 article > h4 {
@@ -198,6 +208,7 @@ article > h4 {
     left: 4%;
     top: -12px;
     font-size: 20px;
+    width: 70%;
 }
 
 article > h5 {
@@ -207,6 +218,7 @@ article > h5 {
     font-size: 19px;
     font-weight: 100;
     color: var(--OMF-gray-dark);
+    width: 70%;
 }
 
 
