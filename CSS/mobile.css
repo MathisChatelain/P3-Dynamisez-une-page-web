@@ -38,6 +38,12 @@ header > input {
     background-color: var(--OMF-gray);
     box-shadow: inset 0px 5px 5px -5px rgba(0, 0, 0, 0.5);
     margin-top: 65px;
+    font-size: 18px;
+}
+
+header > input:focus {
+    border: none;
+    background-color: var(--OMF-cyan-tertiary);
 }
 
 header > input::placeholder {
@@ -97,7 +103,7 @@ button:hover {
     font-size: 27px;
 }
 
-#fonctionnement-section > card {
+#fonctionnement-section > article {
     display: flex;
     height: 60px;
     margin: 0px 12px;
@@ -108,7 +114,7 @@ button:hover {
     box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 20%);
 }
 
-#fonctionnement-section > card:hover {
+#fonctionnement-section > article:hover {
     background-color: #f5edff;
 }
 
@@ -125,17 +131,17 @@ button:hover {
     left: -12px;
 }
 
-#fonctionnement-section > card > i {
+#fonctionnement-section > article > i {
     color: gray;
     font-size: 18px;
     margin: 0px 10px;
 }
 
-#fonctionnement-section > card > i:hover {
+#fonctionnement-section > article > i:hover {
     color: var(--OMF-purple-primary);
 }
 
-#fonctionnement-section > card > h4 {
+#fonctionnement-section > article > h4 {
     font-size: 18px;
     margin: 0px 10px;
 }
@@ -222,9 +228,6 @@ article > h5 {
 }
 
 
-
-
-
 footer {
     display: flex;
     flex-direction: column;
@@ -247,4 +250,14 @@ footer > a {
 footer > a > i {
     font-size: 14px;
     width: 20px;
+}
+
+/*Shared props fixes*/
+
+#fonctionnement-section > article > h4 {
+    position: initial;
+}
+
+#fonctionnement-section > article {
+    overflow: initial;
 }
