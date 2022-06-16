@@ -1,8 +1,12 @@
 @media (min-width: 767px) and (max-width: 991px) {
 
+    main > section {
+        padding: 20px 55px;
+    }
 
-
-
+    main > article {
+        margin: 13px 20px;
+    }
 
 
 

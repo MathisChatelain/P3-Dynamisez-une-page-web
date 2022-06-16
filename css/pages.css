@@ -26,7 +26,6 @@ h1 > svg {
 }
 
 .heart-inside {
-    /* left: calc(100% - 287px); */
     position: relative;
     left: -30px;
     z-index: 3;

@@ -45,13 +45,6 @@ a {
     animation-fill-mode: forwards;
 }
 
-#loading-screen > img {
-  filter: invert();
-  margin: 50px;
-  animation: 1s fade 2s linear;
-  animation-fill-mode: forwards;
-}
-
 .lds-dual-ring {
   display: inline-block;
   width: 400px;
@@ -100,16 +93,18 @@ a {
 
 @keyframes fade {
   0% {
-      opacity: 1;
+    opacity: 1;
   }
   
-  99% {
-      opacity: 0;
+  90% {
+    opacity: 0;
+    transform: translateY(0px);
+    
   }
 
   100% {
     opacity: 0;
-    z-index: -1;
+    transform: translateY(2000px);
   }
 }
 
