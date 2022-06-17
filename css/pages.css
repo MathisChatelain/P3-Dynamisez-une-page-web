@@ -74,8 +74,15 @@ section > article {
 }
 
 .se-1 { animation-delay: 500ms; }
-.se-2 { animation-delay: 1000ms; }
-.se-3 { animation-delay: 1500ms; }
+.se-2 { animation-delay: 750ms; }
+.se-3 { animation-delay: 1000ms; }
+.se-4 { animation-delay: 1250ms; }
+.se-5 { animation-delay: 1500ms; }
+.se-6 { animation-delay: 1750ms; }
+.se-7 { animation-delay: 2000ms; }
+.se-8 { animation-delay: 2250ms; }
+.se-9 { animation-delay: 2500ms; }
+.se-10 { animation-delay: 2750ms; }
 
 
 

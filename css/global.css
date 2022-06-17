@@ -76,7 +76,7 @@ a {
   100% {
     opacity: 0;
     transform: rotate(360deg);
-  }
+  }   
 }
 
 @keyframes animation-appear {
