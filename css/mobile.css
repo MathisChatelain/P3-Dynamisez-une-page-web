@@ -101,6 +101,7 @@ button:hover {
     display: flex;
     height: 60px;
     margin: 0px 12px;
+    width: initial;
     border-radius: 15px;
     background-color: var(--OMF-gray-light);
     justify-content: flex-start;
@@ -147,7 +148,7 @@ button:hover {
 #restaurants-section {
     margin-top: 28px;
     background-color: var(--OMF-gray-light); 
-    margin-bottom: 62px;
+    padding-bottom: 62px;
 }
 
 #restaurants-section > h2 {
